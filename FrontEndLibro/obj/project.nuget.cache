@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3Q2A5Y7WddQeKivaQ3G+Ri8uMfVBPfvObgSEvSF2oljOkmAZCXX3uqGk51PiJzIUdsaVySlK6gi+w8t7KvOm8w==",
+  "dgSpecHash": "YY0s0iCBXk4s/g7vCZqwk/9psd9cFFgbqdFdZsdQQMNpGX2U+4IB64rffn9e3nYlc4nhtGuPzzZhxHqh+4WIug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dirah\\source\\repos\\StefaniniPruebaTecnica\\FrontEndLibro\\FrontEndLibro.csproj",
+  "projectFilePath": "C:\\Users\\dirah\\Documents\\StefaniniDeveloper\\FrontEndLibro\\FrontEndLibro.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\dirah\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\dirah\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []

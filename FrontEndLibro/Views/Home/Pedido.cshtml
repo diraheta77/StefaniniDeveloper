@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Pedido
+
+    <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Pedido">
+        <div class="form-group">
+            <label for="IDLibro">ID Libro:</label>
+            <input asp-for="IDLibro" type="text" class="form-control" id="IDLibro">
+        </div>
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input asp-for="Title" type="text" class="form-control" id="title">
+        </div>
+        <div class="form-group">
+            <label for="direccion">Author:</label>
+            <input asp-for="Author" type="text" class="form-control" id="Author">
+        </div>
+        <div class="form-group">
+            <label for="publisher">Publisher:</label>
+            <input type="text" asp-for="Publisher" class="form-control" id="publisher">
+        </div>
+        <div class="form-group">
+            <label for="languagebook">Language Book:</label>
+            <input type="text" asp-for="Language" class="form-control" id="LanguageBook">
+        </div>
+        <div class="form-group">
+            <label for="fechapedido">Fecha de Pedido:</label>
+            <input type="date" asp-for="FechaPedido" class="form-control" id="FechaPedido">
+        </div>
+        <button type="submit" class="btn btn-primary" id="enviar">Guardar</button>
+    </form>

@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@model Cliente
+
+    <form  method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Registrar">
+        <div class="form-group">
+            <label for="Nombres">Nombres:</label>
+            <input asp-for="Nombres" type="text" class="form-control" id="nombres" value="maria Fernanda">
+        </div>
+        <div class="form-group">
+            <label for="apellidos">Apellidos:</label>
+            <input asp-for="Apellidos" type="text" class="form-control" id="apellidos" value="Iraheta">
+        </div>
+        <div class="form-group">
+            <label for="direccion">Direccion:</label>
+            <input asp-for="Direccion" type="text" class="form-control" id="direccion" value="la misma..">
+        </div>
+        <div class="form-group">
+            <label for="telefono">Telefono:</label>
+            <input type="text" asp-for="Telefono" class="form-control" id="telefono" value="77458899">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" asp-for="Email" class="form-control" id="email" name="Email" value="mafer@gmail.com">
+        </div>
+        <div class="form-group">
+            <label for="fecha">Fecha Nacimiento:</label>
+            <input type="date" asp-for="FechaNacimiento" class="form-control" id="fecha" name="FechaNacimiento">
+        </div>
+        <button type="submit" class="btn btn-primary" id="enviar">Registrar</button>
+    </form>
+
+
+@*@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("#enviar").on('click', function () {
+                var data = {
+                    Nombres: nombres, Apellidos: apellidos, Telefono: telefono, Direccion: direccion, Email: email, FechaNacimiento: fecha
+                };
+                $.post('/Home/Registrar', data, function (response) {
+                    console.log(response);
+                });
+            });
+        });//fin ready
+
+    </script>
+ }*@
+
+

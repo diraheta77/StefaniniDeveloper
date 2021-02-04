@@ -3,6 +3,38 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Libros</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Titulo</th>
+                <th scope="col">Autor</th>
+                <th scope="col">Publicion</th>
+                <th scope="col">Accion</th>
+            </tr>
+        </thead>
+        <tbody id="body">
+            
+        </tbody>
+    </table>
 </div>
+
+
+
+@section Scripts{ 
+<script>
+    $(document).ready(function () {
+        debugger;
+        $.getJSON('https://www.etnassoft.com/api/v1/get/?category=libros_programacion&criteria=most_viewed', function (results) {
+            var trHTML = '';
+            var _link = '';
+            $.each(results, function (i, item) {
+                _link = '<a href="/Home/Pedido/?id='+item.ID+'">Solicitar</a>';
+                trHTML += '<tr><td>' + item.ID + '</td><td>' + item.title + '</td><td>' + item.author + '</td>' +'<td>'+item.publisher+'</td>'+ '<td>'+ _link +'</td>' +'</tr>';
+            });
+            $("#body").append(trHTML);
+        });
+    });
+</script>
+} 
